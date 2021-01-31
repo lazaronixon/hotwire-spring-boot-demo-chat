@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html th:fragment="application(head, yield)" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Chat</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <link rel="stylesheet" media="all" th:href="@{/assets/application.css}"/>
+
+        <th:block th:replace="${head}"/>
+        <!-- turbo_include_tags -->
+        <!-- stimulus_include_tags -->
+    </head>
+
+    <body>
+        <th:block th:replace="${yield}"/>
+    </body>
+</html>

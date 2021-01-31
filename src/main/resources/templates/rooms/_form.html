@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <form th:action="${room.isNewRecord}? @{/rooms} : @{/rooms(id=${room.id})}"
+          th:method="${room.isNewRecord}? 'post' : 'patch'"
+          th:object="${room}">
+        <div class="field">
+            <label for="room_name">Name</label>
+            <input type="text" id="room_name" th:field="*{name}">
+        </div>
+
+        <div class="actions">
+            <input type="submit" name="commit" value="Save Room">
+        </div>
+    </form>
+</html>

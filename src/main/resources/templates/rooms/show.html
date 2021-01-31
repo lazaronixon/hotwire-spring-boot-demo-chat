@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html th:replace="layouts/application :: application(_, ~{::yield})" xmlns:th="http://www.thymeleaf.org">
+    <th:block th:fragment="yield">
+        <p id="notice" th:text="${notice}" />
+
+        <p>
+            <strong>Name:</strong>
+            <span th:text="${room.name}"/>
+        </p>
+
+        <a th:href="@{/rooms/edit(id=${room.id})}">Edit</a> |
+        <a th:href="@{/rooms}">Back</a>
+    </th:block>
+</html>
