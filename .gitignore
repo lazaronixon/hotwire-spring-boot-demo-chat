@@ -5,6 +5,10 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+### Ignore the default H2 database. ###
+src/main/resources/db/*.mv.db
+src/main/resources/db/*.trace.db
+
 ### STS ###
 .apt_generated
 .classpath
